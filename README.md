@@ -1,7 +1,7 @@
 # Personal Site
 
 ## This was invented to demonstrate
-I'm always looking for ways to demonstrate best practices. This repository will be used to demonstrate best practices as I see them, and all of the opinions and architecture decisions I've made here are my own. If I could do something over again, it'd likely be done this way.
+I'm always looking for ways to demonstrate best practices. This repository will be used to demonstrate best practices as I see them, and all of the opinions and architecture decisions I've made here are my own. If I could do something over again, it'd likely be done this way. [See the site here](https://thessler27.github.io/).
 
 ## Site technologies
 This site is built upon the following tools, which I think are important to building good systems:
