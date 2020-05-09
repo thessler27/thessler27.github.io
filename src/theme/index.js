@@ -1,6 +1,6 @@
 /**
 @flow
 */
-export { Fonts } from './Fonts';
-export { Colors } from './Colors';
+export { Fonts } from './fonts';
+export { Colors } from './colors';
 
