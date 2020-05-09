@@ -1,27 +1,42 @@
 {
   "name": "personal-site",
-  "version": "1.0.0",
-  "description": "Thomas's Personal Site",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.1.0",
+    "styled-icons": "^10.2.1"
+  },
   "scripts": {
-    "test": "echo \"No tests\""
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "deploy": "npm run build && gh-pages -d build -b master"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thessler27/thessler27.github.io.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [
-    "thomas",
-    "hessler",
-    "personal"
-  ],
-  "author": "Thomas Hessler <hessler.thomas93@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thessler27/personal-site/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/thessler27/personal-site#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "flow-bin": "^0.124.0",
+    "gh-pages": "^2.2.0"
   }
 }
