@@ -1,26 +1,23 @@
 // @flow
 import React from 'react';
-import Typography from 'components/Typography';
 import Header from 'components/Header';
+import Post from 'components/Post';
 import styled from 'styled-components';
 
-const StyledContainer = styled.div`
-	text-align: center;
+const RootContainer = styled.div`
+	overflow-x: hidden;
 `; 
-
-const items = [
-	{ title: 'Home', link: '/' },
-	{ title: 'Home', link: '/' },
-	{ title: 'Home', link: '/' },
-	{ title: 'Home', link: '/' }
-];
 
 function App() {
   return (
-    <StyledContainer>
-    	<Header items={items} />
-    	<Typography size="large">Website Coming Soon!</Typography>
-    </StyledContainer>
+    <RootContainer>
+    	<Header/>
+    	<Post 
+    		date="10.12.2020" 
+    		title="Hello!" 
+    		content="Yo"
+    	/>
+    </RootContainer>
   );
 }
 

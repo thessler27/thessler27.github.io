@@ -12,7 +12,6 @@ const TextLink: ReactComponentStyled<Props> = styled.a`
 	font-size: ${({size}) => size === 'large' ? 20 : 16}px;
 	color: ${({color}) => color || Colors.granite};
 	&:hover {
-		text-decoration: underline;
 		cursor: pointer;
 	}
 `;

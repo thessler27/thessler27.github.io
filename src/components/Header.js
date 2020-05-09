@@ -1,46 +1,37 @@
 // @flow
 import * as React from 'react';
 import styled, {type ReactComponentStyled} from 'styled-components';
-import TextLink from 'components/TextLink';
+import Typography from 'components/Typography';
 import { Colors } from 'theme/colors';
-
-type HeaderItemType = {
-	title: string,
-	link: string
-};
-
-type HeaderProps = {
-	items: Array<HeaderItemType>
-};
+import { Github } from '@styled-icons/entypo-social/Github';
 
 const HeaderWrapper: ReactComponentStyled = styled.div`
 	background-color: ${Colors.granite};
 	display: flex;
-	flex-direction: row;
 	color: white;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px
+	padding: 20px;
+	justify-content: space-between;
 `;
 
-const HeaderItem: ReactComponentStyled = styled.div`
-	padding-right: ${({lastChild}) => lastChild ? 0 : 12}px;
-	paddind-left: ${({firstChild}) => firstChild ? 0 : 12}px;
+const StyledIconLink = styled.a`
+	&:hover {
+		opacity: 0.5;
+	}
 `;
 
-function Header (props: HeaderProps) {
-	return <HeaderWrapper>{
-		props.items.map(({title}, index) => (
-			<HeaderItem 
-				key={index.toString()}
-				firstChild={index===0}
-				lastChild={(index+1) === props.items.length}>
-				<TextLink color={Colors.white}>
-					{title}
-				</TextLink>
-			</HeaderItem>
-		))
-	}</HeaderWrapper>;
+const GithubIcon = styled(Github)`
+	color: ${Colors.white};
+	height: 16px;
+	width: 16px;
+`;
+
+function Header () {
+	return <HeaderWrapper>
+		<Typography size="small" primitive="h1">Some thoughts.</Typography>
+		<StyledIconLink href="https://github.com/thessler27/thessler27.github.io" target="_blank">
+			<GithubIcon/>
+		</StyledIconLink>
+	</HeaderWrapper>;
 }
 
 export default Header;

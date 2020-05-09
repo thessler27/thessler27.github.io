@@ -14,6 +14,8 @@ type Props = {
 const StyledType: ReactComponentStyled<Props> = styled.span`
 	font-family: ${Fonts.Heebo};
 	font-size: ${({size}) => calcFontSize(size)}px;
+	font-weight: 400;
+	margin:0;
 `;
 
 function calcFontSize (size: string) : number {
@@ -24,6 +26,8 @@ function calcFontSize (size: string) : number {
 			return 40;
 		case 'medium':
 			return 24;
+		case 'small':
+			return 16;
 		default: 
 			return 12;
 	}
